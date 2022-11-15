@@ -26,8 +26,7 @@ The user must set the appropriate parameters to run the program, such as:
 -> Number of robots in the swarm   
 -> Boundaries of the start area and the destination point  
 -> Area of special caution, i.e. the area beyond which a penalty will be applied to the robot's position for approaching other individuals (also in number of map fields)  
-  
-Example of robot inicialization:  
+   
 An example of map starting and finish areas:  
 ![start_end](https://user-images.githubusercontent.com/39136856/201978549-a879e062-7c6f-47c1-ab7b-133268241262.png)
   
