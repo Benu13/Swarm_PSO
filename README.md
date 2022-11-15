@@ -48,7 +48,8 @@ The swarm leader can move freely and have his move calculated first.
 ## Position update 
 After the leader moves, the best step is determined for other robots in the swarm. The priority of movement is determined by the distance of the swarm from the leader. The units move in order from the closest to the furthest from leader.  
 The most optimal position is selected using the PSO algorithm seeking the optimal solution within the limits of possible robot movement.  
-The penalty function of the PSO algorithm takes into account the position of the robot (minimize distance between leader and itself) and the distances to the other individuals (special caution area).  
+The penalty function of the PSO algorithm takes into account the position of the robot (minimize distance between leader and itself) and the distances to the other individuals (special caution area). 
+  
 An example of PSO algorithm looking for the best place for robot to move:  
   
 ![image](https://user-images.githubusercontent.com/39136856/201981636-41141025-1474-4a9e-802d-a822655e21eb.png)
