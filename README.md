@@ -30,8 +30,8 @@ The user must set the appropriate parameters to run the program, such as:
 Example of robot inicialization:  
 An example of map starting and finish areas:  
 ![start_end](https://user-images.githubusercontent.com/39136856/201978549-a879e062-7c6f-47c1-ab7b-133268241262.png)
-
-An example of the map on which the robots move:
+  
+An example of the map on which the robots move:  
 ![example](https://user-images.githubusercontent.com/39136856/201978275-1fb0ad51-f025-4e00-af35-815a96d32539.png)
 
 The blue cross indicates the current position of the robot.  
@@ -42,15 +42,18 @@ Green circles are the area of special caution.
 Since counting for the closest route for each robot would be too heavy computationally, the swarm leader tactic was used.  
 The swarm leader is the robot having the shortest route to the selected endpoint at the start. The other robots in the swarm will be following it at a sufficiently close distance, taking into account the distance to other individuals.    
 The swarm leader can move freely and have his move calculated first.  
+  
 ![image](https://user-images.githubusercontent.com/39136856/201979667-6d367f25-e6c0-4053-b711-86a3f66e966f.png)
   
+   
 ## Position update 
 After the leader moves, the best step is determined for other robots in the swarm. The priority of movement is determined by the distance of the swarm from the leader. The units move in order from the closest to the furthest from leader.  
 The most optimal position is selected using the PSO algorithm seeking the optimal solution within the limits of possible robot movement.  
 The penalty function of the PSO algorithm takes into account the position of the robot (minimize distance between leader and itself) and the distances to the other individuals (special caution area).  
 An example of PSO algorithm looking for the best place for robot to move:  
-![image](https://user-images.githubusercontent.com/39136856/201981636-41141025-1474-4a9e-802d-a822655e21eb.png)
   
+![image](https://user-images.githubusercontent.com/39136856/201981636-41141025-1474-4a9e-802d-a822655e21eb.png)
+   
 Since there may be a change in the robot ranking created based on the distance from the leader during the swarm movement, this ranking is updated every 5 steps. This value can be changed by the user.  
 This procedure improves the smoothness of swarm movement.  
   
